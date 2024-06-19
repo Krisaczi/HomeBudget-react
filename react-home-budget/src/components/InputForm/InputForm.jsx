@@ -28,6 +28,7 @@ const InputForm = (props) => {
         name="amount"
         defaultValue={editMode ? item.amount : ""}
         type="number"
+        step="0.01"
       />
       {!editMode && <button>Add</button>}
       {editMode && <button>Save</button>}
