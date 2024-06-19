@@ -26,7 +26,11 @@ const ListItem = (props) => {
   };
   return (
     <li className={styles.listItem}>
-      {item.name} {item.amount}
+      {!editionOpen && (
+        <>
+          {item.name} {item.amount}
+        </>
+      )}
       <div className={styles.actionButtons}>
         {!editionOpen && (
           <>
