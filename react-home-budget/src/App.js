@@ -15,12 +15,17 @@ function App() {
     difference >= 0
       ? `You have ${difference} left`
       : `Stop spending money!!! You are ${difference} in red `;
+
+  const showH1 = income > 0 || outcome > 0;
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading} style={h1Style}>
-        {" "}
-        {h1Text}
-      </h1>
+      <img className={styles.logo} src="" alt="" />
+      {showH1 && (
+        <h1 className={styles.heading} style={h1Style}>
+          {h1Text}
+        </h1>
+      )}
+
       <div className={styles.transactions}>
         {" "}
         <Transactions total={setIncome} type="INCOME" />

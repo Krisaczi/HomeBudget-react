@@ -31,6 +31,7 @@ const ListItem = (props) => {
         {!editionOpen && (
           <>
             <button
+              className={styles.buttonEdit}
               onClick={() => {
                 setEditionOpen(true);
               }}
@@ -38,6 +39,7 @@ const ListItem = (props) => {
               Edit
             </button>
             <button
+              className={styles.buttonDelete}
               onClick={() => {
                 handleDeleteButton(item.id);
               }}
