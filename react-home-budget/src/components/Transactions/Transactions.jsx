@@ -9,6 +9,7 @@ const Transactions = (props) => {
 
   const addTransaction = (item) => {
     setTransactionsList([...transactionsList, item]);
+    console.log(transactionsList);
   };
 
   useEffect(() => {

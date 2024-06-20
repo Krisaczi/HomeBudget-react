@@ -28,7 +28,7 @@ const ListItem = (props) => {
     <li className={styles.listItem}>
       {!editionOpen && (
         <>
-          {item.name} {item.amount}
+          {item.name} - {parseFloat(item.amount).toFixed(2)}
         </>
       )}
       <div className={styles.actionButtons}>

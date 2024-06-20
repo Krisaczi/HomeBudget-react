@@ -90,7 +90,7 @@ input[type="number"] {
   transition:
     border 0.1s linear,
     background-color 0.1s linear;
-  :focus {
+  &:focus {
     border-color: #1b96ff;
     color: var(--sds-c-input-text-color-focus);
     box-shadow: rgb(1, 118, 211) 0px 0px 3px 0px;

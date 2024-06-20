@@ -19,11 +19,12 @@ function App() {
   const showH1 = income > 0 || outcome > 0;
   return (
     <div className={styles.container}>
-      <img className={styles.logo} src="" alt="" />
+      <h1 className={styles.title}>Your personal home budget calculator</h1>
+      <div className={styles.logo}></div>
       {showH1 && (
-        <h1 className={styles.heading} style={h1Style}>
+        <h2 className={styles.heading} style={h1Style}>
           {h1Text}
-        </h1>
+        </h2>
       )}
 
       <div className={styles.transactions}>
