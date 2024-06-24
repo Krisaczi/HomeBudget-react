@@ -3,28 +3,34 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+}
 
-  .title {
-    font-size: 48px;
-    color: rgb(72, 76, 122);
-  }
-  .logo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: url(./resources/logo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .heading {
-    text-align: center;
-    font-size: 32px;
-  }
+.title {
+  font-size: 48px;
+  color: rgb(72, 76, 122);
+}
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url(./resources/logo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  .transactions {
-    display: flex;
-    justify-content: space-around;
-    gap: 250px;
-  }
+.heading {
+  text-align: center;
+  font-size: 32px;
+}
+
+.transactions {
+  display: flex;
+  justify-content: space-around;
+  gap: 250px;
 }

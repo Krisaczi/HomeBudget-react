@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InputForm from "../InputForm/InputForm";
 import styles from "./Transactions.module.scss";
 import ListItem from "../ListItem/ListItem";
@@ -7,20 +7,20 @@ const Transactions = (props) => {
   const { type, total } = props;
   const [transactionsList, setTransactionsList] = useState([]);
 
-  const addTransaction = (item) => {
-    setTransactionsList([...transactionsList, item]);
-    console.log(transactionsList);
+  const handleChangeTransactionsList = (list) => {
+    setTransactionsList(list);
+    total(list.reduce((acc, item) => acc + Number(item.amount), 0));
   };
 
-  useEffect(() => {
-    total(transactionsList.reduce((acc, item) => acc + Number(item.amount), 0));
-  }, [transactionsList]);
+  const addTransaction = (item) => {
+    handleChangeTransactionsList([...transactionsList, item]);
+  };
 
-  const total1 = transactionsList.reduce(
+  const totalAmount = transactionsList.reduce(
     (acc, item) => acc + Number(item.amount),
     0
   );
-  const decimals = total1.toFixed(2);
+  const decimals = totalAmount.toFixed(2);
   return (
     <div className={styles.transactions}>
       <h2>{type === "INCOME" ? "Income" : "Outcome"}</h2>
@@ -34,7 +34,7 @@ const Transactions = (props) => {
             key={item.id}
             item={item}
             transactionsList={transactionsList}
-            setTransactionsList={setTransactionsList}
+            setTransactionsList={handleChangeTransactionsList}
             type={type}
           />
         ))}

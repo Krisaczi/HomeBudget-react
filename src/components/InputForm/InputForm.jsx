@@ -14,7 +14,6 @@ const InputForm = (props) => {
       amount: amount.value,
     };
     onItemAdd(data);
-    console.log(data);
   };
 
   return (
