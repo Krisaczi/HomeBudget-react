@@ -13,6 +13,7 @@ const InputForm = (props) => {
       name: name.value,
       amount: amount.value,
     };
+    event.currentTarget.reset();
     onItemAdd(data);
   };
 
